@@ -1,6 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: {
@@ -9,7 +11,7 @@ module.exports = {
   mode: "development",
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname, "./dist"),
     publicPath: "/"
   },
   devServer: {
@@ -24,7 +26,11 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
       },
       {
         test: /\.js$/,
@@ -53,13 +59,21 @@ module.exports = {
             loader: "html-loader"
           }
         ]
-      }
+      },
+      { test: /\.hbs$/, loader: "handlebars-loader" }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
-      template: "./client/index.html"
+      template: "./client/index.hbs",
+      bajs: "bajman"
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ]
 };

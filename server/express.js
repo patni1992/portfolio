@@ -1,9 +1,8 @@
 import express from "express";
-const server = express();
-import path from "path";
 
 const webpack = require("webpack");
 const config = require("../webpack.js");
+const server = express();
 const compiler = webpack(config);
 
 const webpackDevMiddleware = require("webpack-dev-middleware")(
