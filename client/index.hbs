@@ -11,9 +11,28 @@
 <body>
 
     <div class="container">
-        <div class="notification">
-            <h1 id="demo" class="title"></h1>
-            <p>I am a web developer. My passion is building simple, beautiful user experiences.</p>
+        <nav class="navbar is-transparent is-spaced has-shadow">
+            <div class="navbar-brand">
+                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-size-5" href="https://bulma.io/">
+                        Home
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="section ">
+            <h1 id="demo" class="title  has-text-weight-normal"></h1>
+            <p class="is-size-3">I am a web developer. My passion is building simple, beautiful user experiences.</p>
+        </section>
+        <section class="section">
             <div class="terminal">
                 <div class="terminal__header">
 
@@ -29,7 +48,10 @@
                     <p class="terminal__input-text">> contactInfo</p>
                     <p class="terminal__output-text">["patriknilsson1992@gmail.com", "Github", "Linkedin"]</p>
                     <p class="terminal__input-text">> resume</p>
-                    <p class="terminal__output-text">patriknilsson.pdf</p>
+                    <p>
+                        <a class="terminal__output-text terminal__output-text--link " href="/cv">patriknilsson.pdf
+                        </a>
+                    </p>
                     <p class="terminal__input-text">> skills</p>
                     <p class="terminal__output-text">["JavaScript", "Node", "React", "Redux", "MySQL", "MongoDB", "Spring", "Sass"]</p>
                     <p class="terminal__input-text">> hoursOfCoding</p>
@@ -39,9 +61,46 @@
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </section>
+        <section class="section">
+            <div class="columns is-multiline spacing  ">
+                <h2 class="title is-size-2 has-text-weight-normal">> My Projects</h2>
+                <div class="column is-12">
+
+                    <div class="card">
+                        <div class="columns is-12">
+                            <div class="card-image column is-5 is-paddingless">
+                                <figure class="image is-4by3">
+                                    <img src="images/test3.png" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="column is-6">
+
+                                <div class="card-content ">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <h3 class="title is-size-4">Ful stack image sharing social media site</h3>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="is-size-5"> Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch
+                                            of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit
+                                            use these smart rooms ham.</p>
+                                        <span class="tag is-light  is-medium">React</span>
+                                        <span class="tag is-light  is-medium">Redux</span>
+                                        <span class="tag is-light  is-medium">Node.js</span>
+                                        <span class="tag is-light  is-medium">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
