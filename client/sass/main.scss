@@ -1,4 +1,5 @@
-@import "~bulma/bulma";
 @import "base/animations";
-@import "base/base";
+@import "abstracts/variables";
 @import "components/terminal";
+@import "~bulma/bulma";
+@import "base/base";
