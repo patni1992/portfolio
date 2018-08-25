@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
+const data = require("./data");
 
 module.exports = {
   entry: {
@@ -67,6 +68,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
+      data,
       template: "./client/index.hbs"
     }),
     new CopyWebpackPlugin([{ from: "client/images", to: "images" }]),

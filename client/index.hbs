@@ -66,31 +66,27 @@
         <section class="section">
             <div class="columns is-multiline spacing  ">
                 <h2 class="title is-size-2 has-text-weight-normal">> My Projects</h2>
+                {{#each htmlWebpackPlugin.options.data.projects}}
                 <div class="column is-12">
-
                     <div class="card">
                         <div class="columns is-12">
                             <div class="card-image column is-5 is-paddingless">
                                 <figure class="image is-4by3">
-                                    <img src="images/test3.png" alt="Placeholder image">
+                                    <img src="{{frontImg}}" alt="Placeholder image ">
                                 </figure>
                             </div>
-                            <div class="column is-6">
-
+                            <div class="column is-6 ">
                                 <div class="card-content ">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <h3 class="title is-size-4">Ful stack image sharing social media site</h3>
+                                    <div class="media ">
+                                        <div class="media-content ">
+                                            <h3 class="title is-size-4 ">{{title}}</h3>
                                         </div>
                                     </div>
-                                    <div class="content">
-                                        <p class="is-size-5"> Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch
-                                            of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit
-                                            use these smart rooms ham.</p>
-                                        <span class="tag is-light  is-medium">React</span>
-                                        <span class="tag is-light  is-medium">Redux</span>
-                                        <span class="tag is-light  is-medium">Node.js</span>
-                                        <span class="tag is-light  is-medium">MongoDB</span>
+                                    <div class="content ">
+                                        <p class="is-size-5 ">{{description}}</p>
+                                        {{#each tags}}
+                                        <span class="tag is-light is-medium ">{{this}}</span>
+                                        {{/each}}
                                     </div>
                                 </div>
                             </div>
@@ -98,6 +94,7 @@
                         </div>
                     </div>
                 </div>
+                {{/each}}
             </div>
         </section>
     </div>
