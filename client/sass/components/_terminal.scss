@@ -1,26 +1,22 @@
 .terminal {
-  margin-top: 10rem;
-  width: 80rem;
-  height: 40rem;
-
   &__blinking-cursor {
     animation: 1s blink step-end infinite;
     padding: 0 0.3rem 0 0.3rem;
-    font-size: 1.5rem;
+
     background: #2eb82e;
   }
 
   &__input-text {
     color: #2eb82e;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     padding-top: 1rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
 
   &__output-text {
     color: #6699ff;
-    font-size: 1.9rem;
-    margin-left: 4rem;
+    font-size: 1.6rem;
+    margin-left: 3rem;
 
     &--error {
       color: #f65549;
