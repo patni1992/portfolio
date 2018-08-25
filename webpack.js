@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
@@ -42,7 +43,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.jpg$/,
+        test: /\.(jpg|png)$/,
         use: [
           {
             loader: "file-loader",
@@ -66,9 +67,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
-      template: "./client/index.hbs",
-      bajs: "bajman"
+      template: "./client/index.hbs"
     }),
+    new CopyWebpackPlugin([{ from: "client/images", to: "images" }]),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
