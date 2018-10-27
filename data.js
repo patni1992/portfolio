@@ -7,7 +7,7 @@ const data = {
       Though wished merits or be. Alone visit use these smart rooms ham.`,
       tags: ["React", "Redux", "Node.js", "MongoDB"],
       frontImg: "images/test1.png",
-      images: ["test1.png"],
+      images: ["images/test1.png", "images/test2.png", "images/test3.png", "images/test4.png"],
       
     }, {
       title: "Kanban board",
@@ -16,16 +16,14 @@ const data = {
       Though wished merits or be. Alone visit use these smart rooms ham.`,
       tags: ["React", "Redux", "Node.js", "MongoDB"],
       frontImg: "images/kanban2.png",
-      images: ["test1.png"]
+      images: ["images/test1.png"]
     },
     {
-      title: "Srping E-commerce shop ",
-      description: `Do answered bachelor occasion in of offended no concerns. 
-      Supply worthy warmth branch of no ye. Voice tried known to as my to. 
-      Though wished merits or be. Alone visit use these smart rooms ham.`,
-      tags: ["React", "Redux", "Node.js", "MongoDB"],
-      frontImg: "images/spring.png",
-      images: ["test1.png"]
+      title: "E-commerce",
+      description: `Cooming soon`,
+      tags: ["Python", "Django", "Vue", "MySQL", "GraphQL"],
+      frontImg: "images/django.jpeg",
+      images: []
     }
   ]
 };

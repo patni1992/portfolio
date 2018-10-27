@@ -71,7 +71,7 @@
             </div>
 
         </section>
-        <section class="section">
+        <section data-card class="section">
             <h2 class="title is-size-2 has-text-weight-normal">> My Projects</h2>
             <div class="columns is-multiline spacing  ">
                 {{#each htmlWebpackPlugin.options.data.projects}}
@@ -79,8 +79,8 @@
                     <div class="card">
                         <div class="columns is-12">
                             <div class="card-image column is-5 is-paddingless">
-                                <figure class="image">
-                                    <img src="{{frontImg}}" alt="Placeholder image ">
+                                <figure class="image project-img">
+                                    <img   data-index={{@index}} data-project-img src="{{frontImg}}" alt="Placeholder image ">
                                 </figure>
                             </div>
                             <div class="column is-6 ">
@@ -103,6 +103,7 @@
 
                         </div>
                     </div>
+                  
                 </div>
                 {{/each}}
             </div>
