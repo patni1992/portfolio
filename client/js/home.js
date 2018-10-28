@@ -13,11 +13,12 @@ const subitEmail = (e) => {
   for (const pair of new FormData(emailForm)) {
     data.append(pair[0], pair[1]);
   }
-  fetch("/test", {
+  fetch("/contact", {
     method: "POST",
     body: data
   }).then(response => {
     sendBtn.classList.remove("is-loading");
+    emailForm.reset();
   });
 }
 
