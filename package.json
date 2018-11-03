@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dokku": {
-      "predeploy": “npm run build”
-     }
+      "predeploy": "npm run build"
+    },
     "start": "node ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config=webpack.js",
