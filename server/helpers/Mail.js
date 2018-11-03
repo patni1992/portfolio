@@ -1,13 +1,11 @@
-import info from '../../config';
 import nodemailer from "nodemailer";
 const smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-        user:  info.email,
-        pass:  info.password
+        user:  process.env.GMAIL_USER,
+        pass:  process.env.GMAIL_PASSWORD
     }
 });
-
 
 class Mail {
     constructor(from) {
