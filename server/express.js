@@ -26,9 +26,10 @@ if (process.env.NODE_ENV !== "production") {
 const staticMiddleware = express.static("dist");
 server.use(staticMiddleware);
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+const HOST = process.env.HOST || "http://localhost"
 server.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
+  console.log(`Server listening on ${HOST}:${PORT}`);
 });
 
 server.use(bodyParser.urlencoded({ extended: false }));
