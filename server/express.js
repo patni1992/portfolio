@@ -1,12 +1,10 @@
 import express from "express";
-import path from "path";
 import Mail from './helpers/Mail'
 const webpack = require("webpack");
 const bodyParser = require("body-parser");
 const config = require("../webpack.js");
 const server = express();
 const compiler = webpack(config);
-
 
 if (process.env.NODE_ENV !== "production") {
   const webpackDevMiddleware = require("webpack-dev-middleware")(
@@ -23,26 +21,18 @@ if (process.env.NODE_ENV !== "production") {
   server.use(webpackHotMiddlware);
 }
 
-const staticMiddleware = express.static("dist");
-server.use(staticMiddleware);
-
 const PORT = 8080;
 server.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
 
 server.use(bodyParser.urlencoded({ extended: false }));
-
-// parse serverlication/json
 server.use(bodyParser.json());
+server.use(express.static("dist"));
 
-server.get("/cv", function(req, res) {
-  var filePath = path.join(__dirname, "../dist/images/cv-2018-pn-921113.pdf");
+server.get("/cv", (req, res) => res.download(__dirname, "../dist/images/cv-2018-pn-921113.pdf"));
 
-  res.download(filePath);
-});
-
-server.post("/contact", function(req, res) {
+server.post("/contact", (req, res) => {
   const {name, email, subject, message} = req.body;
   const mail = new Mail("Patrik");
   const output = `
