@@ -7,7 +7,7 @@ const data = {
       Though wished merits or be. Alone visit use these smart rooms ham.`,
       tags: ["React", "Redux", "Node.js", "MongoDB"],
       frontImg: "images/test1.png",
-      images: ["images/test1.png", "images/test2.png", "images/test3.png", "images/test4.png"],
+      images: ["images/imagesly-5.png", "images/imagesly-2.png", "images/imagesly-3.png", "images/imagesly-4.png"],
       
     }, {
       title: "Kanban board",
@@ -16,7 +16,7 @@ const data = {
       Though wished merits or be. Alone visit use these smart rooms ham.`,
       tags: ["React", "Redux", "Node.js", "MongoDB"],
       frontImg: "images/kanban2.png",
-      images: ["images/test1.png"]
+      images: ["images/kanban2.png", "images/kanban.png"]
     },
     {
       title: "E-commerce",

@@ -39,8 +39,8 @@ function insertHTML(mountingElement, images) {
     <div class="modal-background"></div>
     <div class="modal-card">
         <section class="modal-card-body">
-            <div class="columns is-multiline is-gapless">
-                <div class="is-12">
+            <div class="columns is-mobile is-multiline is-gapless">
+                <div class="column is-12">
                     <img data-main-img class="carosouel__main-img " src="${activeImage}"
                         alt="">
                 </div>
