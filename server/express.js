@@ -21,16 +21,17 @@ if (process.env.NODE_ENV !== "production") {
   server.use(webpackHotMiddlware);
 }
 
-const PORT = 8080;
-server.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
-});
 
+const PORT = process.env.PORT || 8080;
+const HOST = process.env.HOST || "http://localhost"
+
+server.listen(PORT, () => console.log(`Server listening on ${HOST}:${PORT}`));
+
+server.use(sxpress.static("build"));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
-server.use(express.static("dist"));
 
-server.get("/cv", (req, res) => res.download(__dirname, "../dist/images/cv-2018-pn-921113.pdf"));
+server.get("/cv", (req, res) => res.download(path.join(__dirname, "../build/images/cv-2018-pn-921113.pdf")));
 
 server.post("/contact", (req, res) => {
   const {name, email, subject, message} = req.body;

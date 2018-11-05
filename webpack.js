@@ -13,11 +13,11 @@ module.exports = {
   mode: "development",
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./build"),
     publicPath: "/"
   },
   devServer: {
-    contentBase: "dist",
+    contentBase: "build",
     overlay: true,
     hot: true,
     stats: {

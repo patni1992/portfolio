@@ -61,6 +61,6 @@ typings/
 .next
 
 dist/
+build
 .DS_store
 
-config.js
