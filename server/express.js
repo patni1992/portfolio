@@ -27,7 +27,7 @@ const HOST = process.env.HOST || "http://localhost"
 
 server.listen(PORT, () => console.log(`Server listening on ${HOST}:${PORT}`));
 
-server.use(sxpress.static("build"));
+server.use(express.static("build"));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
