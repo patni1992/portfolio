@@ -1,6 +1,7 @@
 import express from "express";
 import Mail from './helpers/Mail'
 const webpack = require("webpack");
+const path = require('path')
 const bodyParser = require("body-parser");
 const config = require("../webpack.js");
 const server = express();

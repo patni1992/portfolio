@@ -10,6 +10,9 @@
     font-size: $size-4;
     padding-top: 3rem;
     margin-left: 3rem;
+    &:last-child {
+      padding-bottom: 3rem; 
+    }
   }
 
   &__output-text {

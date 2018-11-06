@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,13 +23,13 @@
 
             <div id="navbarExampleTransparentExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item is-size-5" href="https://bulma.io/">
+                    <a class="navbar-item is-size-5" href="/">
                         Home
                     </a>
-                    <a class="navbar-item is-size-5" href="https://bulma.io/">
+                    <a class="navbar-item is-size-5" href="/#projects">
                         Projects
                     </a>
-                    <a class="navbar-item is-size-5" href="https://bulma.io/">
+                    <a class="navbar-item is-size-5" href="/#contact">
                         Contact
                     </a>
                 </div>
@@ -58,10 +59,10 @@
                         <a class="terminal__output-text terminal__output-text--link " href="/cv">patriknilsson.pdf
                         </a>
                     </p>
-                    <p class="terminal__input-text">> Frontend skills</p>
+                    <p class="terminal__input-text">> frontendSkills</p>
                     <p class="terminal__output-text">["JavaScript", "React", "Redux", "Sass"]</p>
-                    <p class="terminal__input-text">> Backend skills</p>
-                    <p class="terminal__output-text">["Node", "MySQL", "MongoDB", "Java" "Spring"]</p>
+                    <p class="terminal__input-text">> backendSkills</p>
+                    <p class="terminal__output-text">["Node", "MySQL", "MongoDB", "Python" "Django"]</p>
                     <p class="terminal__input-text">> hoursOfCoding</p>
                     <p class="terminal__output-text terminal__output-text--error">Error Infinity</p>
                     <p class="terminal__input-text">>
@@ -71,16 +72,16 @@
             </div>
 
         </section>
-        <section data-card class="section">
-            <h2 class="title is-size-2 has-text-weight-normal">> My Projects</h2>
+        <section id="projects" data-card class="section">
+            <h2 class="title is-size-2 has-text-weight-normal">> My Projects </h2>
             <div class="columns is-multiline spacing  ">
                 {{#each htmlWebpackPlugin.options.data.projects}}
                 <div class="column is-12">
                     <div class="card">
                         <div class="columns is-12">
-                            <div class="card-image column is-5 is-paddingless">
+                            <div class="card-image column is-6 is-paddingless">
                                 <figure class="image project-img">
-                                    <img   data-index={{@index}} data-project-img src="{{frontImg}}" alt="Placeholder image ">
+                                    <img data-index={{@index}} data-project-img src="{{frontImg}}" alt="Placeholder image ">
                                 </figure>
                             </div>
                             <div class="column is-6 ">
@@ -92,6 +93,22 @@
                                     </div>
                                     <div class="content ">
                                         <p class="is-size-5 ">{{description}}</p>
+                                        <div class="features">
+                                            <ul>
+                                                {{#each features}}
+                                                <li class="feature__item has-text-weight-semibold is-uppercase is-size-6">{{this}}</li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                        <div class="social-links">
+                                            {{#each links}}
+                                            <a target="_blank" class="social-link" href="{{link}}">
+                                                <span class="icon social-link__icon">
+                                                    <i class="{{icon}}"></i>
+                                                </span> {{title}}
+                                            </a>
+                                            {{/each}}
+                                        </div>
                                         <div class="tags">
                                             {{#each tags}}
                                             <span class="tag  is-medium ">{{this}}</span>
@@ -103,12 +120,12 @@
 
                         </div>
                     </div>
-                  
+
                 </div>
                 {{/each}}
             </div>
         </section>
-        <section class="section">
+        <section id="contact" class="section">
             <h2 class="title is-size-2 has-text-weight-normal">> Get in touch</h2>
             <form id="email-form">
                 <div class="columns">
