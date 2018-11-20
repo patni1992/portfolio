@@ -1,9 +1,7 @@
 import Terminal from "./Terminal";
-import data from '../../data';
 const terminal = new Terminal();
 const emailForm = document.getElementById("email-form");
 const sendBtn = document.getElementById("send-btn");
-let imageModal;
 
 const subitEmail = (e) => {
   e.preventDefault();
@@ -19,21 +17,6 @@ const subitEmail = (e) => {
     sendBtn.classList.remove("is-loading");
     emailForm.reset();
   });
-}
-
-
-const showModal = (e) => {
-  const index = e.target.dataset.index;
-  const images = data.projects[index].images;
-
-  if (!images.length > 0) return;
-
-  if (! imageModal) {
-    imageModal = new ImageModal(document.getElementsByTagName("body")[0], images)
-  } else {
-     imageModal.build(document.getElementsByTagName("body")[0], images)
-  }
-   imageModal.show();
 }
 
 terminal.typeWriter(document.getElementById("demo"), "> Patrik Nilsson");
