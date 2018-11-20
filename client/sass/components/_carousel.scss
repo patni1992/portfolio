@@ -1,15 +1,34 @@
-.carosouel__img {
-    width: 100%;
-    height: 80%;
-    padding-top: 0.2rem; 
-    cursor: pointer;
-}
 
-.carosouel__main-img {
+.carousel {
+    height: 100%;
+  }
+  
+  .carousel-cell {
     width: 100%;
-}
 
-.carosouel__selected {
-    border: 2px solid black;
-    box-shadow: 5px 3px 30px black;
-}
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell {
+      margin-top: 60px; 
+   width:  100%;
+  }
+  
+  .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell-image {
+    max-width: 85%;
+  }
+  
+  .flickity-page-dots {
+      position: absolute;
+      bottom: 25px; 
+  }
+
+  

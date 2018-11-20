@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
 </head>
 
 <body>
@@ -72,6 +75,7 @@
             </div>
 
         </section>
+
         <section id="projects" data-card class="section">
             <h2 class="title is-size-2 has-text-weight-normal">> My Projects </h2>
             <div class="columns is-multiline spacing  ">
@@ -81,7 +85,17 @@
                         <div class="columns is-12">
                             <div class="card-image column is-6 is-paddingless">
                                 <figure class="image project-img">
-                                    <img data-index={{@index}} data-project-img src="{{frontImg}}" alt="Placeholder image ">
+                                    {{#if images}}
+                                    <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+                                        {{#each images}}
+                                        <div class="carousel-cell">
+                                            <img class="carousel-cell-image" src="{{this}}" />
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                    {{else}}
+                                    <img data-index={{@index}} data-project-img src="{{frontImg}}" alt="Placeholder image ">{{/if}}
+
                                 </figure>
                             </div>
                             <div class="column is-6 ">
@@ -168,6 +182,8 @@
             </form>
         </section>
     </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 import Terminal from "./Terminal";
-import ImageModal from "./ImageModal";
-import data from '../../data'
+import data from '../../data';
 const terminal = new Terminal();
 const emailForm = document.getElementById("email-form");
 const sendBtn = document.getElementById("send-btn");
@@ -21,6 +20,7 @@ const subitEmail = (e) => {
     emailForm.reset();
   });
 }
+
 
 const showModal = (e) => {
   const index = e.target.dataset.index;
