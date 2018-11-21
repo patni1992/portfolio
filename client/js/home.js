@@ -22,7 +22,3 @@ const subitEmail = (e) => {
 terminal.typeWriter(document.getElementById("demo"), "> Patrik Nilsson");
 
 emailForm.addEventListener("submit", subitEmail);
-
-const projectImgs = document.querySelectorAll('[data-project-img]');
-projectImgs.forEach(projectImg => projectImg.addEventListener("click", showModal))
-
