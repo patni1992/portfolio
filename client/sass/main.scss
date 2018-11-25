@@ -1,8 +1,9 @@
 @import "base/utilities";
 @import "base/animations";
 @import "abstracts/variables";
+@import "~bulma/bulma";
 @import "components/carousel";
 @import "components/terminal";
-@import "~bulma/bulma";
+@import "components/alert";
 @import "base/base";
 @import "index";
