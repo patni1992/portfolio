@@ -1,15 +1,19 @@
+$margin-left: 1.8rem;
+$green-color: #2eb82e;
+$red-color: #f65549;
+
 .terminal {
   &__blinking-cursor {
     animation: 1s blink step-end infinite;
     padding: 0 0.3rem 0 0.3rem;
-    background: #2eb82e;
+    background: $green-color;
   }
 
   &__input-text {
-    color: #2eb82e;
+    color: $green-color;
     font-size: $size-4;
     padding-top: 3rem;
-    margin-left: 3rem;
+    margin-left: $margin-left;
     &:last-child {
       padding-bottom: 3rem; 
     }
@@ -18,7 +22,7 @@
   &__output-text {
     color: #6699ff;
     font-size: $size-4;
-    margin-left: 3rem;
+    margin-left: $margin-left;
 
     &--link {
       color: #57c1a8;
@@ -29,7 +33,7 @@
     }
 
     &--error {
-      color: #f65549;
+      color: $red-color;
     }
   }
 
@@ -58,7 +62,7 @@
 
     &--red {
       background-color: #f96256;
-      border: 0.1rem solid #f65549;
+      border: 0.1rem solid $red-color;
     }
     &--yellow {
       background-color: #fdbc3d;

@@ -1,7 +1,14 @@
 import Terminal from "./Terminal";
-const terminal = new Terminal();
+import { isElementVisible } from "./utils"
+let terminal = new Terminal();
 const emailForm = document.getElementById("email-form");
 const sendBtn = document.getElementById("send-btn");
+const myProjects = document.getElementById("my-projects");
+const getInTouch = document.getElementById("get-in-touch");
+const visible = {
+  myProjects: false,
+  getInTouch: false
+}
 
 const subitEmail = (e) => {
   e.preventDefault();
@@ -21,4 +28,24 @@ const subitEmail = (e) => {
 
 terminal.typeWriter(document.getElementById("demo"), "> Patrik Nilsson");
 
+const handler = () => {
+  if (!visible.myProjects && isElementVisible(myProjects)) {
+    visible.myProjects = true;
+    terminal = new Terminal();
+    terminal.typeWriter(myProjects, "> My Projects ");
+  }
+
+  if (!visible.getInTouch && isElementVisible(getInTouch)) {
+    visible.getInTouch = true;
+    terminal = new Terminal();
+    terminal.typeWriter(getInTouch, "> Get in touch");
+  }
+
+  if(visible.myProjects && visible.getInTouch) {
+    window.removeEventListener('scroll', handler);
+  }
+}
+
+window.addEventListener('scroll', handler);
 emailForm.addEventListener("submit", subitEmail);
+
