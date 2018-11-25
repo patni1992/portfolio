@@ -5,28 +5,51 @@ const emailForm = document.getElementById("email-form");
 const sendBtn = document.getElementById("send-btn");
 const myProjects = document.getElementById("my-projects");
 const getInTouch = document.getElementById("get-in-touch");
+const alert = document.getElementById("alert");
 const visible = {
   myProjects: false,
   getInTouch: false
 }
 
+
+terminal.typeWriter(document.getElementById("demo"), "> Patrik Nilsson");
+
 const subitEmail = (e) => {
   e.preventDefault();
   sendBtn.classList.add("is-loading");
   const data = new URLSearchParams();
+ 
   for (const pair of new FormData(emailForm)) {
     data.append(pair[0], pair[1]);
   }
+
   fetch("/contact", {
     method: "POST",
     body: data
   }).then(response => {
+
     sendBtn.classList.remove("is-loading");
+    toggleAlert("Success email sent", "")
+    if (!response.ok) {
+      throw Error(response.statusText);
+  }
     emailForm.reset();
-  });
+  })
+  .catch(err => {
+    toggleAlert("Could not send email", "error")
+  })
 }
 
-terminal.typeWriter(document.getElementById("demo"), "> Patrik Nilsson");
+const toggleAlert = (message, type) => {
+  alert.classList.remove("danger")
+  if(type === "error") {
+    alert.classList.add("danger")
+  }
+  
+  alert.textContent = message ;
+  alert.classList.remove("alert--hidden");
+  setTimeout(() => alert.classList.add("alert--hidden"), 2500)
+}
 
 const handler = () => {
   if (!visible.myProjects && isElementVisible(myProjects)) {

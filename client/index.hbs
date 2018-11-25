@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Patrik Nilsson full-stack developer</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
@@ -40,7 +40,7 @@
         </nav>
         <section class="section ">
             <h1 id="demo" class="title  has-text-weight-normal"></h1>
-            <p class="is-size-3">I am a web developer. My passion is building simple, beautiful user experiences.</p>
+            <p class="is-size-3">I am a fullstack web developer. My passion is writing simple and beatiful code.</p>
         </section>
         <section class="section">
             <div class="terminal">
@@ -56,7 +56,10 @@
                 </div>
                 <div class="terminal__window">
                     <p class="terminal__input-text">> contactInfo</p>
-                    <p class="terminal__output-text">["patriknilsson1992@gmail.com", "Github", "Linkedin"]</p>
+                    <p class="terminal__output-text">["patriknilsson1992@gmail.com",
+                        <a class="terminal__output-text terminal__output-text--link " target=”_blank” href="https://github.com/patni1992">Github
+                        </a>]
+                    </p>
                     <p class="terminal__input-text">> resume</p>
                     <p>
                         <a class="terminal__output-text terminal__output-text--link " href="/cv">patriknilsson.pdf
@@ -77,7 +80,7 @@
         </section>
 
         <section id="projects" data-card class="section">
-            <h2 class="title is-size-2 has-text-weight-normal">> My Projects </h2>
+            <h2 id="my-projects" class="title is-size-2 has-text-weight-normal">> My Projects</h2>
             <div class="columns is-multiline spacing  ">
                 {{#each htmlWebpackPlugin.options.data.projects}}
                 <div class="column is-12">
@@ -140,7 +143,10 @@
             </div>
         </section>
         <section id="contact" class="section">
-            <h2 class="title is-size-2 has-text-weight-normal">> Get in touch</h2>
+            <div id="alert" class="alert alert--hidden is-size-5">
+                Success email sent
+            </div>
+            <h2 id="get-in-touch" class="title is-size-2 has-text-weight-normal">> Get in touch</h2>
             <form id="email-form">
                 <div class="columns">
                     <div class="column is-6">
