@@ -26,8 +26,8 @@ const data = {
           icon: "fas fa-2x fa-desktop"
         }
       ],
-      frontImg: "images/imagesly-4.png",
-      images: ["images/imagesly-4.png","images/imagesly-3.png","images/imagesly-5.png", "images/imagesly-2.png"],
+      frontImg: "images/imagesly1.jpg",
+      images: ["images/imagesly1.jpg", "images/imagesly3.jpg", "images/imagesly4.jpg", "images/imagesly6.jpg","images/imagesly5.jpg"],
       
     }, {
       title: "Kanban board",
@@ -47,8 +47,8 @@ const data = {
           icon: "fas fa-2x fa-desktop"
         }
       ],
-      frontImg: "images/kanban2.png",
-      images: ["images/kanban2.png", "images/kanban.png"]
+      frontImg: "images/kanban.jpg",
+      images: ["images/kanban.jpg", "images/kanban2.jpg", "images/kanban3.jpg"]
     },
     {
       title: "E-commerce",
