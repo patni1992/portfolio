@@ -1,6 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
@@ -63,6 +65,12 @@ module.exports = {
         ]
       },
       { test: /\.hbs$/, loader: "handlebars-loader" }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({}),
+      new OptimizeCssAssetsPlugin({})
     ]
   },
   plugins: [
