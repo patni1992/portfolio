@@ -53,8 +53,8 @@ const data = {
     {
       title: "E-commerce",
       description: `Cooming soon`,
-      tags: ["Python", "Django", "Vue", "MySQL", "GraphQL"],
-      frontImg: "images/django.jpeg",
+      tags: ["Node.js", "Apollo", "MySQL", "GraphQL"],
+      frontImg: "images/og_image.png",
       images: []
     }
   ]
