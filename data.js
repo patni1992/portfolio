@@ -21,8 +21,13 @@ const data = {
           icon: "fab fa-2x fa-github"
         },
         {
-          link: "#",
-          title: "Demo",
+          link: "https://photo-app-frontend.netlify.com",
+          title: "Frontend demo",
+          icon: "fas fa-2x fa-desktop"
+        },
+        {
+          link: "https://photo-app-backend.patriknilsson.me",
+          title: "Backend Demo",
           icon: "fas fa-2x fa-desktop"
         }
       ],
