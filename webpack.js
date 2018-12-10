@@ -28,8 +28,15 @@ module.exports = {
   },
   module: {
     rules: [
+
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           "css-loader",

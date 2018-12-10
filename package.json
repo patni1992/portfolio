@@ -31,6 +31,8 @@
     "express": "^4.16.3",
     "extract-loader": "^2.0.1",
     "file-loader": "^2.0.0",
+    "flickity": "^2.1.2",
+    "flickity-fullscreen": "^1.1.1",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.7.0",
     "html-loader": "^0.5.5",
