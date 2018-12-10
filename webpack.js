@@ -18,6 +18,9 @@ module.exports = {
     path: path.resolve(__dirname, "./build"),
     publicPath: "/"
   },
+  performance: {
+     	maxEntrypointSize:400000
+     },
   devServer: {
     contentBase: "build",
     overlay: true,
