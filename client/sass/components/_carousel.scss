@@ -11,7 +11,7 @@
     height: 100%;
   }
 
-  @media (max-width:1025px) {
+  @media screen and (max-width: 1025px) {
     .flickity-fullscreen-button {
       display: none;
     }
