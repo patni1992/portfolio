@@ -11,9 +11,13 @@
     height: 100%;
   }
 
-  @media screen and (max-width: 1025px) {
+  .flickity-fullscreen-button {
+    display: none;
+  }
+
+  @media screen and (min-width: 1025px) {
     .flickity-fullscreen-button {
-      display: none;
+      display: block;
     }
   }
   .carousel.is-fullscreen .carousel-cell-image {
