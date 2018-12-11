@@ -78,12 +78,12 @@
         </section>
         <section id="projects" data-card class="section">
             <h2 id="my-projects" class="title is-size-2 has-text-weight-normal">> My Projects</h2>
-            <div class="columns is-multiline spacing  ">
+            <div class="columns is-multiline spacing ">
                 {{#each htmlWebpackPlugin.options.data.projects}}
-                <div class="column is-12">
+                <div class="column is-12 ">
                     <div class="card hide-overflow">
-                        <div class="columns is-12">
-                            <div class="card-image column is-6 is-paddingless">
+                        <div class="columns is-desktop">
+                            <div class="card-image column is-paddingless">
                                 <figure class="image project-img">
                                     {{#if images}}
                                     <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": true }'>
@@ -98,7 +98,7 @@
 
                                 </figure>
                             </div>
-                            <div class="column is-6 ">
+                            <div class="column ">
                                 <div class="card-content ">
                                     <div class="media ">
                                         <div class="media-content ">
@@ -150,19 +150,19 @@
                         <div class="field">
                             <label class="label">Subject</label>
 
-                            <input class="input " name="subject" type="text" required placeholder="Text input">
+                            <input class="input " name="subject" type="text" required>
 
                         </div>
                         <div class="field">
                             <label class="label">Name</label>
 
-                            <input class="input" name="name" type="text" required placeholder="Text input">
+                            <input class="input" name="name" type="text" required>
 
                         </div>
                         <div class="field">
                             <label class="label">Email</label>
 
-                            <input class="input" name="email" required type="email" placeholder="Email input">
+                            <input class="input" name="email" required type="email">
 
 
                         </div>
@@ -171,7 +171,7 @@
                         <div class="field">
                             <label class="label">Message</label>
                             <div class="control">
-                                <textarea rows="7" class="textarea" name="message" required placeholder="Textarea"></textarea>
+                                <textarea rows="7" class="textarea" name="message" required></textarea>
                             </div>
                         </div>
                     </div>
