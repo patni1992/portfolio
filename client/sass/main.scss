@@ -2,6 +2,8 @@
 @import "base/animations";
 @import "abstracts/variables";
 @import "~bulma/bulma";
+@import "../../node_modules/flickity/dist/flickity.css";
+@import "../../node_modules/flickity-fullscreen/fullscreen.css";
 @import "components/carousel";
 @import "components/terminal";
 @import "components/alert";
