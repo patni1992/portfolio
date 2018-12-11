@@ -76,7 +76,6 @@
             </div>
 
         </section>
-
         <section id="projects" data-card class="section">
             <h2 id="my-projects" class="title is-size-2 has-text-weight-normal">> My Projects</h2>
             <div class="columns is-multiline spacing  ">
@@ -87,10 +86,10 @@
                             <div class="card-image column is-6 is-paddingless">
                                 <figure class="image project-img">
                                     {{#if images}}
-                                    <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+                                    <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": true }'>
                                         {{#each images}}
                                         <div class="carousel-cell">
-                                            <img class="carousel-cell-image" src="{{this}}" />
+                                            <img class="carousel-cell-image" data-flickity-lazyload="{{src}}" alt="{{alt}}" />
                                         </div>
                                         {{/each}}
                                     </div>

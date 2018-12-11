@@ -16,7 +16,14 @@
   .carousel.is-fullscreen .carousel-cell {
     height: 100%;
   }
-  
+
+  @media (max-width:1025px) {
+    .flickity-fullscreen-button {
+      display: none;
+    }
+  }
+
+
   .carousel-cell-image {
     display: block;
     max-height: 100%;

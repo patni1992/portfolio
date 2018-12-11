@@ -32,7 +32,7 @@ const data = {
         }
       ],
       frontImg: "images/imagesly1.jpg",
-      images: ["images/imagesly1.jpg", "images/imagesly3.jpg", "images/imagesly4.jpg", "images/imagesly6.jpg","images/imagesly5.jpg"],
+      images: [{src: "images/imagesly1.jpg", alt:"Imagesly - social media"}, {src:"images/imagesly3.jpg", alt:"Imagesly - social media"}, {src:"images/imagesly4.jpg", alt:"Imagesly - social media"}, {src:"images/imagesly6.jpg", alt:"Imagesly - social media"},{src:"images/imagesly5.jpg", alt:"Imagesly - social media"}],
       
     }, {
       title: "Kanban board",
@@ -53,7 +53,7 @@ const data = {
         }
       ],
       frontImg: "images/kanban.jpg",
-      images: ["images/kanban.jpg", "images/kanban2.jpg", "images/kanban3.jpg"]
+      images: [{src:"images/kanban.jpg", alt:"Kanban board"}, {src:"images/kanban2.jpg",  alt:"Kanban board"}, {src:"images/kanban3.jpg",  alt:"Kanban board"}]
     },
     {
       title: "E-commerce",
