@@ -2,9 +2,9 @@ const data = {
   projects: [
     {
       title: "Social media image sharing site",
-      description: `A place where users can upload their favorite photos and interacting with other people. 
+      description: `A place where users can upload their favorite photos and interact with other people. 
       Application consist of two parts, backend part written with Node.js, Express.js and MongoDB as database. 
-      Frontend part is writen with React, styled componnets and redux.`,
+      Frontend part is writen with React, Styled componnets and Redux.`,
       features: ["Search images on tags or description", "Endless scroll", "Authentication with jwt-token",
                 "interact using comments,", "seperate REST api"
       ],
