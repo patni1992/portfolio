@@ -5,6 +5,8 @@ const emailForm = document.getElementById("email-form");
 const sendBtn = document.getElementById("send-btn");
 const myProjects = document.getElementById("my-projects");
 const getInTouch = document.getElementById("get-in-touch");
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('#'+burger.dataset.target);
 const alert = document.getElementById("alert");
 const visible = {
   myProjects: false,
@@ -68,6 +70,11 @@ const handler = () => {
     window.removeEventListener('scroll', handler);
   }
 }
+
+burger.addEventListener('click', function(){
+  burger.classList.toggle('is-active');
+  nav.classList.toggle('is-active');
+});
 
 window.addEventListener('scroll', handler);
 emailForm.addEventListener("submit", subitEmail);
