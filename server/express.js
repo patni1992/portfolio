@@ -32,7 +32,7 @@ server.use(express.static("build"));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
-server.get("/cv", (req, res) => res.download(path.join(__dirname, "../build/images/cv-2018-pn-921113.pdf")));
+server.get("/cv", (req, res) => res.download(path.join(__dirname, "../build/images/Patrik-Nilsson-CV.pdf")));
 
 server.post("/contact", (req, res) => {
   const {name, email, subject, message} = req.body;
