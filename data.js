@@ -13,22 +13,22 @@ const data = {
         {
           link: "https://github.com/patni1992/photo-app-frontend",
           title: "Frontend repo",
-          icon: "fab fa-2x fa-github"
+          icon: "icon-github"
         },
         {
           link: "https://github.com/patni1992/photo-app-backend",
           title: "Backend repo",
-          icon: "fab fa-2x fa-github"
+          icon: "icon-github"
         },
         {
           link: "https://photo-app-frontend.netlify.com",
           title: "Frontend demo",
-          icon: "fas fa-2x fa-desktop"
+          icon: "icon-display"
         },
         {
           link: "https://photo-app-backend.patriknilsson.me",
           title: "Backend Demo",
-          icon: "fas fa-2x fa-desktop"
+          icon: "icon-display"
         }
       ],
       frontImg: "images/imagesly1.jpg",
@@ -44,12 +44,12 @@ const data = {
         {
           link: "https://github.com/patni1992/kanban-board-react",
           title: "Repo",
-          icon: "fab fa-2x fa-github"
+          icon: "icon-github"
         },
         {
           link: "https://react-kanban-board.netlify.com/",
           title: "Demo",
-          icon: "fas fa-2x fa-desktop"
+          icon: "icon-display"
         }
       ],
       frontImg: "images/kanban.jpg",

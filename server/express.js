@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 1337;
 const HOST = process.env.HOST || "http://localhost"
 
 server.listen(PORT, () => console.log(`Server listening on ${HOST}:${PORT}`));

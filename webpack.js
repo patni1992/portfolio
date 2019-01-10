@@ -31,7 +31,11 @@ module.exports = {
   },
   module: {
     rules: [
-
+      {
+         test: /\.(eot|woff|svg|ttf)$/, loader: "file-loader" ,
+        
+      },
+      
       {
         test: /\.css$/,
         include: /node_modules/,
