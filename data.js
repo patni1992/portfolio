@@ -73,7 +73,7 @@ const data = {
         }
       ],
       frontImg: "images/ecommerce1.jpg",
-      images: [{src:"images/ecommerce1.jpg", alt:"e-commerce"}, {src:"images/ecommerce2.jpg", alt:"e-commerce"}, {src:"images/ecommerce3.jpg", alt:"e-commerce"}, {src:"images/ecommerce4.jpg", alt:"e-commerce"}, {src:"images/ecommerce5.jpg", alt:"e-commerce"}, {src:"images/ecommerce6.jpg", alt:"e-commerce"}]
+      images: [{src:"images/ecommerce1.jpg", alt:"e-commerce"}, {src:"images/ecommerce2.jpg", alt:"e-commerce"}, {src:"images/ecommerce4.jpg", alt:"e-commerce"}, {src:"images/ecommerce5.jpg", alt:"e-commerce"}, {src:"images/ecommerce6.jpg", alt:"e-commerce"}]
     }
   ]
 };
