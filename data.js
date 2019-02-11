@@ -57,10 +57,23 @@ const data = {
     },
     {
       title: "E-commerce",
-      description: `Cooming soon`,
-      tags: ["Node.js", "Apollo", "MySQL", "GraphQL"],
-      frontImg: "images/og_image.png",
-      images: []
+      description: `E-commerce built with Django. User can add items to to the shopping cart and create orders.`,
+      features: ["Filter products by category", "Shopping cart saved in sessions", "mail confirmation after checkout"],
+      tags: ["Django", "Python", "MySQL", "Bootstrap 4"],
+      links: [
+        {
+          link: "https://github.com/patni1992/django-ecommerce",
+          title: "Repo",
+          icon: "icon-github"
+        },
+        {
+          link: "https://ecommerce.patriknilsson.me/",
+          title: "Demo",
+          icon: "icon-display"
+        }
+      ],
+      frontImg: "images/ecommerce1.jpg",
+      images: [{src:"images/ecommerce1.jpg", alt:"e-commerce"}, {src:"images/ecommerce2.jpg", alt:"e-commerce"}, {src:"images/ecommerce3.jpg", alt:"e-commerce"}, {src:"images/ecommerce4.jpg", alt:"e-commerce"}, {src:"images/ecommerce5.jpg", alt:"e-commerce"}, {src:"images/ecommerce6.jpg", alt:"e-commerce"}]
     }
   ]
 };
