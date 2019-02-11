@@ -43,14 +43,15 @@ const subitEmail = (e) => {
 }
 
 const toggleAlert = (message, type) => {
-  alert.classList.remove("danger")
-  if(type === "error") {
-    alert.classList.add("danger")
-  }
+  let typeOfAlert = ''
   
-  alert.textContent = message ;
-  alert.classList.remove("alert--hidden");
-  setTimeout(() => alert.classList.add("alert--hidden"), 2500)
+  if(type === "error") {
+    typeOfAlert = "danger"
+  }
+
+  let html = `<div id="alert" class="alert is-size-5 ${typeOfAlert}">${message}</div>`;
+  document.getElementById('contact').insertAdjacentHTML('beforeend', html);
+  setTimeout(() => document.getElementById('alert').remove(), 2500)
 }
 
 const handler = () => {
